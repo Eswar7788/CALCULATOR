@@ -1,0 +1,63 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+        input[type="number"]{
+            background-color: aqua;
+            margin-top:40px;
+            border-radius: 10px;
+            padding:5px;
+            margin-left: 500px;
+        }
+        .add,.sub,.mul,.div{
+            background-color: bisque;
+            border-radius: 30px;
+            padding:15px;
+            margin:15px;
+        }
+        .add{
+            margin-left: 400px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function sum(){
+            let a=Number(document.getElementById("n1").value);
+            let b=Number(document.getElementById("n2").value);
+            let ans=a+b;
+            document.getElementById("ans").value=ans;
+        }
+        function subtract(){
+            let a=Number(document.getElementById("n1").value);
+            let b=Number(document.getElementById("n2").value);
+            let ans=a-b;
+            document.getElementById("ans").value=ans;
+        }
+        function multiply(){
+            let a=Number(document.getElementById("n1").value);
+            let b=Number(document.getElementById("n2").value);
+            let ans=a*b;
+            document.getElementById("ans").value=ans;
+        }
+        function divide(){
+            let a=Number(document.getElementById("n1").value);
+            let b=Number(document.getElementById("n2").value);
+            let ans=a/b;
+            document.getElementById("ans").value=ans;
+        }
+        
+    </script>
+    <input type="number" placeholder="num1" id="n1">
+    <input type="number" placeholder="num2" id="n2"><br><br>
+    <button class="add" onclick="sum()">Add</button>
+    <button class="sub" onclick="subtract()">Subtract</button>
+    <button class="mul" onclick="multiply()">Multiply</button>
+    <button class="div" onclick="divide()">Division</button><br><br>
+    <input type="number" placeholder="answer" id="ans">
+</body>
+</html>
+
